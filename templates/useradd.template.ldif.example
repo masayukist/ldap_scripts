@@ -1,0 +1,12 @@
+dn: uid=${USERNAME},ou=Users,dc=hoge,dc=com
+uid: ${USERNAME}
+cn: ${USERNAME}
+objectClass: posixAccount
+objectClass: top
+objectClass: inetOrgPerson
+userPassword: ${PASS_ENT}
+loginShell: /bin/bash
+uidNumber: ${USER_ID}
+gidNumber: 2000
+homeDirectory: /uhome/${USERNAME}
+sn: ${USERNAME}
