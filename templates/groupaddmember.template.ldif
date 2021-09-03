@@ -1,0 +1,4 @@
+dn: cn=${GROUP_NAME},ou=Groups,${LDAP_DN}
+changetype: modify
+add: memberUid
+memberUid: ${USER_NAME}

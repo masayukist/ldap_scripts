@@ -1,4 +1,4 @@
-dn: uid=${USERNAME},ou=Users,dc=hoge,dc=com
+dn: uid=${USERNAME},ou=Users,${LDAP_DN}
 uid: ${USERNAME}
 cn: ${USERNAME}
 objectClass: posixAccount
@@ -10,3 +10,4 @@ uidNumber: ${USER_ID}
 gidNumber: 2000
 homeDirectory: /uhome/${USERNAME}
 sn: ${USERNAME}
+

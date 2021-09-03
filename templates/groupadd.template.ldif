@@ -1,0 +1,5 @@
+dn: cn=${GROUP_NAME},ou=Groups,${LDAP_DN}
+objectClass: posixGroup
+objectClass: top
+cn: ${GROUP_NAME}
+gidNumber: ${GROUP_ID}

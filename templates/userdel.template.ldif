@@ -1,0 +1,1 @@
+uid=${USERNAME},ou=Users,${LDAP_DN}
