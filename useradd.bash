@@ -18,6 +18,11 @@ read MAILADDR
 export USERNAME
 export MAILADDR
 
+echo -------------------------
+echo username: ${USERNAME}
+echo mail address: ${MAILADDR}
+echo -------------------------
+${SCRIPT_DIR}/subcmds/confirm_dialog.bash
 
 DATETIME=`date +%Y%m%d-%H%M%S`
 LDIF_FILE=${SCRIPT_DIR}/ldifs/${DATETIME}.useradd.ldif
@@ -39,3 +44,5 @@ envsubst < ${SCRIPT_DIR}/templates/useradd_mail.template.txt > ${MAIL_FILE}
 # send mail
 LC_CTYPE=ja_JP.UTF-9 cat ${MAIL_FILE} | mailx -r ${MAIL_SENDER} -b ${MAIL_BCC} \
     -s "Notification of your account (${USERNAME}) for COSMIC cluster" ${MAILADDR}
+
+echo ${USERNAME},${MAILADDR}, >> ${SCRIPT_DIR}/mailaddrs.csv
