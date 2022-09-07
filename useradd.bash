@@ -22,7 +22,7 @@ echo -------------------------
 echo username: ${USERNAME}
 echo mail address: ${MAILADDR}
 echo -------------------------
-${SCRIPT_DIR}/subcmds/confirm_dialog.bash
+source ${SCRIPT_DIR}/subcmds/confirm_dialog.bash
 
 DATETIME=`date +%Y%m%d-%H%M%S`
 LDIF_FILE=${SCRIPT_DIR}/ldifs/${DATETIME}.useradd.ldif
